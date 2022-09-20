@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formBase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formBase.css') }}">
+    <title>{% block title %}
+
+        {% endblock title %}</title>
+</head>
+
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="box">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+            {% for _, message in messages %}
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ message }}
+            </div>
+            {% endfor %}
+
+            {% endif %}
+            {% endwith %}
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <center>
+                <div class="container">
+                    <div class="form">
+                        <h2> {% block h2 %}
+
+                            {% endblock h2 %}</h2>
+                        <form method="POST" class="form-register">
+                            {{ form.hidden_tag() }}
+                            {% block input %}
+
+                            {% endblock input %}
+                            <!-- <div class="inputBox">
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div> -->
+                        </form>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

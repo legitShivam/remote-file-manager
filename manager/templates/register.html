@@ -1,0 +1,31 @@
+{% extends 'formBase.html' %}
+
+{% block title %}
+Register Form
+{% endblock title %}
+
+{% block h2 %}
+Registration Form
+{% endblock h2 %}
+
+
+{% block input %}
+<div class="inputBox">
+    {{ form.name(class="form-control", type='text', placeholder="Name") }}
+</div>
+<div class="inputBox">
+    {{ form.userName(class="form-control", type='text', placeholder="Usename") }}
+</div>
+<div class="inputBox">
+    {{ form.character(class="form-control", type='text', placeholder="Character") }}
+</div>
+<div class="inputBox">
+    {{ form.password(class="form-control", type='password', placeholder="Password") }}
+</div>
+<div class="inputBox">
+    {{ form.confirmPassword(class="form-control", type='password', placeholder="Confirm Password") }}
+</div>
+<div class="inputBox">
+    {{ form.submit(type="submit", value="Submit") }}
+</div>
+{% endblock input %}

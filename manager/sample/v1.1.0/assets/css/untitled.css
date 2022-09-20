@@ -1,0 +1,56 @@
+#dataTable {
+}
+
+tr td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+td {
+  max-width: 100%;
+}
+
+th {
+  max-width: 100%;
+}
+
+.cmd {
+  min-height: 70vh;
+}
+
+.cmd-input {
+  border-width: 0px;
+  outline: none;
+  width: 100%;
+}
+
+#container-fluid, .cmd-input {
+  background: black;
+}
+
+.table td, .table th {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.card.border-left-success {
+  min-height: 100%;
+}
+
+@media screen and (max-width : 400px) {
+  .cmd-span {
+    display: none;
+  }
+}
+
+@media screen and (min-width : 400px) {
+  .cmd-textarea {
+    display: none;
+  }
+}
+
+input {
+  /*visibility: hidden;*/
+  width: inherit;
+}
+
